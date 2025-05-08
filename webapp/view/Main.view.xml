@@ -18,7 +18,7 @@
                 filterChange=".onFilterChange"
                 afterVariantLoad=".onAfterVariantLoad"
                 filterContainerWidth="13rem"
-                header="inLog"
+                header="inLog" showClearOnFB="false"
                 class="sapUiSmallMarginBottom"
             >
               <fb:filterGroupItems>                                
@@ -27,14 +27,17 @@
 								groupName="Group1" 
 								visibleInFilterBar="true" mandatory="true">
                                     <fb:control>
-                                        <Input
+                                        <!-- <Input
                                          id="idEquipment" 
 										 width="90%"  
 										 showValueHelp="true"
 										 value="{filters>/idEquipment}"
-                                         class="sapUiSmallMarginBottom">
-                                        </Input>
-                                        
+                                         class="sapUiSmallMarginBottom" valueHelpRequest="onSingleConditionVHRequested">
+                                        </Input> -->
+                                        <MultiInput id="idEquipment"
+			valueHelpIconSrc="sap-icon://value-help" value="{filters>/idEquipment}"
+			width="60%"  class="sapUiSmallMarginBottom"
+			valueHelpRequest="onSingleConditionVHRequested"/>
                                     </fb:control>
                                 </fb:FilterGroupItem>
 									<fb:FilterGroupItem 
@@ -47,7 +50,7 @@
                                             id="idDTP1"
                                             width="100%"
                                             placeholder="Enter Date &amp; Time"
-                                            class="sapUiSmallMarginBottom" />
+                                            class="sapUiSmallMarginBottom"/>
                                                                                     
 											</fb:control>
 										</fb:FilterGroupItem>
